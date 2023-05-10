@@ -1,0 +1,15 @@
+Item	Description												
+Sample Description	ChIP-seq												
+Tissue Type	Mouse												
+Library Type													
+Run Type	PE(Paired read)												
+Run Cycles	28+10+10+72 cycles												
+Prefered Machine													
+Sample Prep Kit	Custom Kit with P5/P7 adaptor												
+													
+sample ID	Sample Description	Library Type	Library size (bp)	illumina Index1 #	Index Sequence	illumina Index2 #	Index Sequence	Concentration	% in Total Volume	Project	Run Type	Run Cycles	Prefered Machine
+LC623	10x multiome-0.6%FA-GBM39-HSR-mild-remove SDS-FACS-RNA lib	10xMultiome	400	B1		B1		2nM	100	scHiC	PE	28+10+10+72	NextSeq 2000/P2-100cycles
+LC624	10x multiome-0.6%FA-mouse cortex-mild-remove SDS-FACS-RNA lib	10xMultiome	400	B2		B2		2nM	100	scHiC	PE	28+10+10+72	NextSeq 2000/P2-100cycles
+LC625	10x multiome-0.6%FA-GBM-P4CC3-mild-remove SDS-FACS-RNA lib	10xMultiome	400	B3		B3		2nM	100	scHiC	PE	28+10+10+72	NextSeq 2000/P2-100cycles
+LC626	Droplet PT-2B-A5-7-Frozen-RNA lib	10xMultiome	400	B4		B4		2nM	100	BICAN	PE	28+10+10+72	NextSeq 2000/P2-100cycles
+LC627	Droplet PT-4B-A5-7-Fresh-RNA lib	10xMultiome	400	B5		B5		2nM	100	BICAN	PE	28+10+10+72	NextSeq 2000/P2-100cycles

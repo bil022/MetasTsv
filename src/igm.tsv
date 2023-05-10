@@ -1,0 +1,28 @@
+	Sequencing Manifest											
+Date of Sample Submission	4/13/23			FOR INTERNAL USE ONLY						FOR INTERNAL USE ONLY: BILLING INFO		
+Institute/Company Name	Ren lab			Library/Pool QC:		Date:						
+PI Name	Bing Ren			Qubit:								
+PI Email	biren@health.ucsd.edu			☐Bioanalyzer; ☐TS:								
+Contact Name	Lei Chang			qPCR:								
+Contact Email	lec008@health.ucsd.edu; y2xie@health.ucsd.edu											
+Member of Moores Cancer Center	No			Sequencing Information:								
+Member of Diabetes Research Center	No			pM loaded:								
+GI Center Project	No			Sequencing Run Name:								
+Contact Phone Number	8582813650/8582411926			Lane(s):								
+Project Number	100011-01360											
+Task Number												
+Funding Source Number (if sposored research)												
+Run Bioanalyzer/Tape Station 	No			SPECIAL INSTRUCTIONS/COMMENTS								
+Perform qPCR	Yes			The concentration of the library is around 10 nM.Please use 100+8+24+100 as run cycles. 								
+PhiX %	0%											
+Platform	NovaSeq S4											
+Run Type	Other (Specify in Comments)											
+Custom Primer? (Provide more info in comments box)	No-Standard Illumina Primers are fine											
+Sequencing Index System	Dual											
+Total number of Samples	4 Samples in 1 pool											
+Total number of Lanes OR Total Reads Required	1 Lane											
+Sample Name	Pool Name	Library Size (bp)	Library Prep Method	Index 1 i7 (Name)	Index 1 i7 (Sequence)	Index 2 i5 (Name)	Index 2 i5 (Sequence-WORKFLOW A)	Index 2 i5 (Sequence-WORKFLOW B)	Conc (nM)	Volume (ul)	Quantification Method	Comment
+LC547	1%FA-Hela-mESC-FACS-rep1-scHiC lib-1.55x	400	10xMultiome kit	B6		NA			10	5	qPCR	The concentration of the library is around 10 nM.Please use 100+8+24+100 as run cycles. 
+LC545	0.6%FA-Hela-mESC-FACS-rep2-scHiC lib-1.55x	400	10xMultiome kit	B4		NA			10	5	qPCR	
+LC608	10x multiome-0.6%FA-mouse cortex-mild-remove SDS-FACS-scHiC lib-1.55x	400	10xMultiome kit	B8		NA			10	17	qPCR	
+LC609	10x multiome-1%FA-mouse cortex-mild-remove SDS-FACS-scHiC lib-1.55x	400	10xMultiome kit	B9		NA			10	3	qPCR	
