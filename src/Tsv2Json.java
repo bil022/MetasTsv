@@ -11,12 +11,13 @@ public class Tsv2Json extends tsvBaseVisitor<String> {
 
     JsonObjectBuilder headBuilder = Json.createObjectBuilder();
     ArrayList<String> tableHeader = new ArrayList<String>();
+    JsonArrayBuilder warning = Json.createArrayBuilder();
 
     JsonObjectBuilder currRow = Json.createObjectBuilder();
     JsonArrayBuilder tableBuilder = Json.createArrayBuilder();
 
     JsonObject build() {
-        headBuilder.add("data", tableBuilder.build());
+        headBuilder.add("data", tableBuilder.build()).add("warning", warning);
         return headBuilder.build();
         /*
         JsonObject personObject = Json.createObjectBuilder().add("name", "Jack").add("age", 13)
@@ -29,6 +30,17 @@ public class Tsv2Json extends tsvBaseVisitor<String> {
             .build();
        */
     }
+
+    @Override public String visitRenlab(tsvParser.RenlabContext ctx) {
+        headBuilder.add("Source", "renlab");
+        return visitChildren(ctx);
+    }
+
+    @Override public String visitIgm(tsvParser.IgmContext ctx) {
+        headBuilder.add("Source", "igm");
+        return visitChildren(ctx);
+    }
+
     @Override public String visitHdr(tsvParser.HdrContext ctx) {
         // System.out.println("hdr:");
         index=0;
@@ -70,6 +82,12 @@ public class Tsv2Json extends tsvBaseVisitor<String> {
                     // System.out.println(lastField + " => '" + value + "'");
                     headBuilder.add(lastField, value);
                 }
+            } else if (index==0) {
+                if (value==null)
+                    warning.add("A key field is null at line "+ ctx.getStart().getLine());
+            } else {
+                if (value!=null)
+                    warning.add("Skip '"+value+"' at line " + ctx.getStart().getLine());
             }
             // if (value!=null) System.err.println("\tFind field["+index+"]: '"+value+"'");
             lastField=value;
@@ -84,7 +102,9 @@ public class Tsv2Json extends tsvBaseVisitor<String> {
                 tableBuilder.add(currRow);
             } else {
                 if (index>=tableHeader.size()) {
-                    System.err.println("Out of scope? ["+index+"]>"+tableHeader.size());
+                    String msg="Out of scope? ["+index+"]>"+tableHeader.size();
+                    warning.add(msg);
+                    System.err.println(msg);
                 }
                 if (value!=null)
                     currRow.add(tableHeader.get(index), value);

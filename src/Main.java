@@ -12,7 +12,7 @@ public class Main {
         // ANTLRInputStream antlrInputStream = new ANTLRInputStream("hello world");
         System.out.println("Path: " + Paths.get("").toAbsolutePath().toString());
 
-        CharStream antlrInputStream = CharStreams.fromFileName("src/renlab.tsv");
+        CharStream antlrInputStream = CharStreams.fromFileName("src/igm.tsv");
         String input=antlrInputStream.toString()+"\n";
         tsvLexer lexer = new tsvLexer(CharStreams.fromString(input));
 
